@@ -17,14 +17,14 @@ import 'es6-promise/auto' //Vuex 依赖 Promise。如果你支持的浏览器并
 import 'babel-polyfill';
 
 import axios from 'axios'
-
+import Base from './utils/base.js'  //引入封装公共方法
 
 
 Vue.use(VueRouter)
 Vue.use(VueI18n)
 Vue.use(ElementUi)
 Vue.use(Vuex)
-
+Vue.use(Base)
 
 Vue.config.productionTip = false
 
@@ -134,6 +134,7 @@ new Vue({
   el: '#app',
   router,
   i18n,
+  store,
   components: { App },
   template: '<App/>'
 })
